@@ -21,8 +21,8 @@ export const ResponsiveDiaglog = ({
             <Drawer open={open} onOpenChange={onOpenChange}>
                 <DrawerContent>
                     <DrawerHeader>
-                        <DialogTitle>{description}</DialogTitle>
                         <DialogTitle>{title}</DialogTitle>
+                        <DialogTitle>{description}</DialogTitle>
                     </DrawerHeader>
 
                     <div className="p-4">
