@@ -34,11 +34,7 @@ export const AgentForm=({
                 await queryClient.invalidateQueries(
                     trpc.agents.getMany.queryOptions({}),
                 );
-                if(initialValues?.id){
-                    await queryClient.invalidateQueries(
-                        trpc.agents.getOne.queryOptions({id:initialValues.id}),
-                    );
-                }
+                //TODO:invalidate free tier usage
                 onSuccess?.();
             },
             onError:(error)=>{
@@ -53,7 +49,12 @@ export const AgentForm=({
                 await queryClient.invalidateQueries(
                     trpc.agents.getMany.queryOptions({}),
                 );
-                //TODO:invalidate free tier usage
+                if(initialValues?.id){
+                    await queryClient.invalidateQueries(
+                        trpc.agents.getOne.queryOptions({id:initialValues.id}),
+                    );
+                }
+                
                 onSuccess?.();
             },
             onError:(error)=>{
