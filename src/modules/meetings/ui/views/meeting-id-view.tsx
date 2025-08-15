@@ -7,7 +7,7 @@ import { useMutation, useQueryClient, useSuspenseQuery } from "@tanstack/react-q
 import { MeetingIdViewHeader } from "../components/meeting-id-view-header";
 import { useRouter } from "next/navigation";
 import { useConfirm } from "@/hooks/use-confirm";
-import { UpdateMeetingDialog } from "../components/update-meeting-dialog copy";
+import { UpdateMeetingDialog } from "../components/update-meeting-dialog";
 import { useState } from "react";
 import { UpcomingState } from "../components/upcoming-state";
 import { ActiveState } from "../components/active-state";
